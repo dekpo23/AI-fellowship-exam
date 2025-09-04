@@ -25,6 +25,8 @@ try:
             print(multiply(num1, num2))
         elif choice == '/':
             print(divide(num1, num2))
+            if num2 == 0:
+                raise ZeroDivisionError('Divisor musn\'nt be 0')
         elif choice == 'exit':
             break
         else:
@@ -33,7 +35,7 @@ except ValueError as e:
     print('Error:', e)
 
 except ZeroDivisionError as e:
-    print('Error:', e)
+    print("can't divide by zero")
 
 
 
